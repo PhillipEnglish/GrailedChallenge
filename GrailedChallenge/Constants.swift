@@ -6,7 +6,6 @@
 //  Copyright © 2017 vitkiarts. All rights reserved.
 //
 
-import Foundation
 
 internal struct Constants {
 	static let baseURLString = "https://www.grailed.com/"
