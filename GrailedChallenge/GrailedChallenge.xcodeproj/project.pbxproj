@@ -14,6 +14,7 @@
 		C309803A1F716EC000989BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30980391F716EC000989BB5 /* Assets.xcassets */; };
 		C309803D1F716EC000989BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C309803B1F716EC000989BB5 /* LaunchScreen.storyboard */; };
 		C372893B1F71FFE100B19360 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C372893A1F71FFE100B19360 /* Constants.swift */; };
+		C372893D1F72008300B19360 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C372893C1F72008300B19360 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		C30980371F716EC000989BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C30980391F716EC000989BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C309803C1F716EC000989BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C309803E1F716EC000989BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C372893A1F71FFE100B19360 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C372893C1F72008300B19360 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C37289401F7201BF00B19360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		C30980261F716EBF00989BB5 = {
 			isa = PBXGroup;
 			children = (
+				C372893C1F72008300B19360 /* Default-568h@2x.png */,
 				C30980311F716EC000989BB5 /* GrailedChallenge */,
 				C30980301F716EC000989BB5 /* Products */,
 				2380A3D574312E42640AD7DD /* Pods */,
@@ -93,7 +96,7 @@
 		C37289341F71FF4D00B19360 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C309803E1F716EC000989BB5 /* Info.plist */,
+				C37289401F7201BF00B19360 /* Info.plist */,
 				C309803B1F716EC000989BB5 /* LaunchScreen.storyboard */,
 				C30980321F716EC000989BB5 /* AppDelegate.swift */,
 				C30980391F716EC000989BB5 /* Assets.xcassets */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C309803D1F716EC000989BB5 /* LaunchScreen.storyboard in Resources */,
+				C372893D1F72008300B19360 /* Default-568h@2x.png in Resources */,
 				C309803A1F716EC000989BB5 /* Assets.xcassets in Resources */,
 				C30980381F716EC000989BB5 /* Main.storyboard in Resources */,
 			);
@@ -405,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P4CM4ZFAJ;
-				INFOPLIST_FILE = GrailedChallenge/Info.plist;
+				INFOPLIST_FILE = GrailedChallenge/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitkiarts.GrailedChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P4CM4ZFAJ;
-				INFOPLIST_FILE = GrailedChallenge/Info.plist;
+				INFOPLIST_FILE = GrailedChallenge/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitkiarts.GrailedChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
