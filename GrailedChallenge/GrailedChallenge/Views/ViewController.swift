@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var testImage: UIImageView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		testImage.loadImageUsingCacheViaCDN(withURL: "https://d1qz9pzgo5wm5k.cloudfront.net/api/file/dnOnXLz3QJMU64UlYWQg", andWidth: 236)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
