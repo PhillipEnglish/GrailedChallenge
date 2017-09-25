@@ -6,12 +6,12 @@
 //  Copyright © 2017 vitkiarts. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import Alamofire
 
 enum APIRouter: URLRequestConvertible {
 	
-	case getArticles
+	case getArticles(String?)
 	case getSavedSearch
 	
 	var method: Alamofire.HTTPMethod {
@@ -23,8 +23,9 @@ enum APIRouter: URLRequestConvertible {
 	
 	var path: String {
 		switch self {
-		case .getArticles:
-			return Constants.articlesPathString
+		case .getArticles(let pagination):
+			let pageString = pagination ?? ""
+			return Constants.articlesPathString + pageString
 		case .getSavedSearch:
 			return Constants.savedSearchPathString
 		}
