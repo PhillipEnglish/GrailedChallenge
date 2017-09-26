@@ -14,7 +14,7 @@ typealias FeedCompletionHandler = (Result<JSON>) -> Void
 
 struct APIController {
 	
-	func getArticles(pagination: String?, compleionHandler: @escaping FeedCompletionHandler) {
+	static func getArticles(pagination: String?, compleionHandler: @escaping FeedCompletionHandler) {
 		let page: String = pagination ?? ""
 		let endpoint = Constants.baseURLString + Constants.articlesPathString + page
 		guard let url = URL(string: endpoint) else { return }
@@ -29,9 +29,10 @@ struct APIController {
 				return
 			}
 			
-			let responseCode = response?.getStatusCode()
-			guard responseCode == 200 else {
-				compleionHandler(Result.failure(GrailedError.invalidResponseCode(responseCode)))
+			let statusCode = response?.getStatusCode() ?? 0
+			guard 200...299 ~= statusCode else {
+				compleionHandler(Result.failure(GrailedError.invalidResponseCode(statusCode)))
+				return
 			}
 			
 			let responseJSON = JSON(responseData)

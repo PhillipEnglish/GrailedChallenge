@@ -7,26 +7,38 @@
 //
 
 import Foundation
+import SwiftyJSON
+
 
 class ArticlesViewModel {
 	
 	private var articles: [Article] = []
-	private let apiController = APIController()
 	private var paginationString: String? = nil
 	
-	func getArticlesFromServer(pagination: String = paginationString) {
-		apiController.getArticles(pagination: pagination) { result in
+	func getArticlesFromServer(pagination: String?) {
+		APIController.getArticles(pagination: pagination) { result in
 			switch result {
 			case .success(let response):
-				self.parseResponseData(response)
+				self.parseResponseData(responseJSON: response)
 			case .failure(let error):
+				print(error)
 				//handle error here
 			}
 		}
 		
 	}
 	
-	func parseResponseData(responseData: Data) {
+	func parseResponseData(responseJSON: JSON) {
+		let decoder = JSONDecoder()
+		//var dataArray: Data?
+		do {
+			
+			let data = try responseJSON["data"].rawData()
+			articles = try decoder.decode([Article].self, from: data)
+			print("articles count: \(articles.count)")
+		} catch {
+			print("could not make article objects from data")
+			}
 		
-	}
+		}
 }
