@@ -21,3 +21,8 @@ public enum Result<T> {
 	
 	
 }
+
+enum GrailedError: Error {
+	case invalidDataResponse
+	case invalidResponseCode(int)
+}
