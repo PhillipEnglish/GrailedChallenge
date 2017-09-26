@@ -12,7 +12,12 @@ import SwiftyJSON
 
 class ArticlesViewModel {
 	
-	private var articles: [Article] = []
+	weak var delegate: ViewModelDelegate?
+	private var articles: [Article] = [] {
+		didSet {
+			delegate?.viewModelDidSetData()
+		}
+	}
 	private var paginationString: String? = nil
 	
 	func getArticlesFromServer(pagination: String?) {
@@ -21,8 +26,7 @@ class ArticlesViewModel {
 			case .success(let response):
 				self.parseResponseData(responseJSON: response)
 			case .failure(let error):
-				print(error)
-				//handle error here
+				self.delegate?.viewModelDidThrowError(error: error)
 			}
 		}
 		
