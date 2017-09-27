@@ -18,7 +18,8 @@ class ArticlesViewModel {
 			delegate?.viewModelDidSetData()
 		}
 	}
-	private var paginationString: String? = nil
+	
+	var paginationString: String? = nil
 	
 	func getArticlesFromServer(pagination: String?) {
 		APIController.getArticles(pagination: pagination) { result in
@@ -36,13 +37,26 @@ class ArticlesViewModel {
 		let decoder = JSONDecoder()
 		//var dataArray: Data?
 		do {
-			
 			let data = try responseJSON["data"].rawData()
-			articles = try decoder.decode([Article].self, from: data)
+			let articlesToAppend = try decoder.decode([Article].self, from: data)
+			articles.append(contentsOf: articlesToAppend)
 			print("articles count: \(articles.count)")
 		} catch {
 			print("could not make article objects from data")
 			}
-		
+		if let nextPage = responseJSON[ArticlesAPIConstants.dataString][ArticlesAPIConstants.paginationString][ArticlesAPIConstants.nextPageString].string {
+			paginationString = nextPage
 		}
+	}
+	
+	func numberOfArticles() -> Int {
+		return articles.count
+	}
+	
+	func article(at index: IndexPath) -> ArticleCellViewModel {
+		let article = articles[index.row]
+		return ArticleCellViewModel.viewModel(with: article)
+	}
 }
+
+

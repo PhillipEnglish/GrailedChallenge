@@ -15,3 +15,10 @@ internal struct Constants {
 	static let savedSearchPathString = "merchandise/marquee"
 	
 }
+
+internal struct ArticlesAPIConstants {
+	static let dataString = "data"
+	static let metaDataString = "metadata"
+	static let paginationString = "pagination"
+	static let nextPageString = "next_page"
+}

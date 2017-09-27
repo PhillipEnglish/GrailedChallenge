@@ -5,9 +5,18 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
+        <array key="GeorgiaBold.ttf">
+            <string>Georgia-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Saved Search-->
         <scene sceneID="lpn-m5-x4a">
@@ -45,6 +54,56 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qz0-eo-5jj">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="321" id="lQv-Ty-sSg" customClass="ArticleCell" customModule="GrailedChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="321"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQv-Ty-sSg" id="7Pq-ym-fZG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="320.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-u9-xfE">
+                                                    <rect key="frame" x="67" y="17" width="240" height="186"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6l8-lX-Rdl">
+                                                    <rect key="frame" x="8" y="229" width="359" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="x3d-Cw-eql"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i8-bS-NBo">
+                                                    <rect key="frame" x="8" y="274" width="359" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="twa-UP-h6K"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6l8-lX-Rdl" firstAttribute="trailing" secondItem="7Pq-ym-fZG" secondAttribute="trailingMargin" id="EDQ-bj-Sbv"/>
+                                                <constraint firstItem="6l8-lX-Rdl" firstAttribute="leading" secondItem="7Pq-ym-fZG" secondAttribute="leadingMargin" id="IrH-yO-e4u"/>
+                                                <constraint firstItem="9i8-bS-NBo" firstAttribute="top" secondItem="6l8-lX-Rdl" secondAttribute="bottom" constant="8" symbolic="YES" id="Ojr-5a-KzM"/>
+                                                <constraint firstItem="6l8-lX-Rdl" firstAttribute="leading" secondItem="9i8-bS-NBo" secondAttribute="leading" id="Ryi-4a-XRo"/>
+                                                <constraint firstItem="6l8-lX-Rdl" firstAttribute="trailing" secondItem="9i8-bS-NBo" secondAttribute="trailing" id="TIQ-V7-hM7"/>
+                                                <constraint firstItem="BdZ-u9-xfE" firstAttribute="leading" secondItem="7Pq-ym-fZG" secondAttribute="leadingMargin" constant="59" id="ZRK-0k-DcQ"/>
+                                                <constraint firstItem="BdZ-u9-xfE" firstAttribute="centerX" secondItem="6l8-lX-Rdl" secondAttribute="centerX" id="eKv-f5-UZx"/>
+                                                <constraint firstItem="6l8-lX-Rdl" firstAttribute="top" secondItem="BdZ-u9-xfE" secondAttribute="bottom" constant="26" id="sYk-L0-6oO"/>
+                                                <constraint firstItem="BdZ-u9-xfE" firstAttribute="top" secondItem="7Pq-ym-fZG" secondAttribute="topMargin" constant="9" id="w55-do-Mgk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9i8-bS-NBo" secondAttribute="bottom" constant="9.5" id="zhW-Cu-wUd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="BdZ-u9-xfE" id="7xj-Wp-0q7"/>
+                                            <outlet property="publishedAtLabel" destination="9i8-bS-NBo" id="vTe-SE-Cao"/>
+                                            <outlet property="titleLabel" destination="6l8-lX-Rdl" id="gZ5-K7-Wyz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
