@@ -15,7 +15,10 @@ class ArticlesViewModel {
 	weak var delegate: ViewModelDelegate?
 	private var articles: [Article] = [] {
 		didSet {
-			delegate?.viewModelDidSetData()
+			DispatchQueue.main.async {
+				self.delegate?.viewModelDidSetData()
+			}
+			
 		}
 	}
 	

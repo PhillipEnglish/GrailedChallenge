@@ -12,12 +12,10 @@ import UIKit
 let imageCache = NSCache<NSString, AnyObject>()
 
 extension UIImageView {
-	func loadImageUsingCacheViaCDN(withURL urlString: String, andWidth width:Int) {
-		let concatenatedURLString = Constants.baseCDNString + String(width) + Constants.secondaryCDNString + urlString
+	func loadImageUsingCacheViaCDN(withURL urlString: String, andWidth width:Int, andHeight height: Int) {
+		let concatenatedURLString = Constants.baseCDNString + String(width) + Constants.cdnHeightString + String(height) + Constants.secondaryCDNString + urlString
 		guard let imageURL = URL(string: concatenatedURLString) else  {return}
-		
 		self.image = nil
-		
 		// check cache for image
 		if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
 			self.image = cachedImage

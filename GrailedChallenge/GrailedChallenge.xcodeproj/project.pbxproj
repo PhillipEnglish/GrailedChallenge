@@ -37,6 +37,8 @@
 		C30980371F716EC000989BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C30980391F716EC000989BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C309803C1F716EC000989BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3131B941F7BFF40009B4298 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
+		C3131B951F7C0B08009B4298 /* waiting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waiting.jpg; sourceTree = "<group>"; };
 		C31577951F7204850058888B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C33D5ABE1F7AD56B00C3E033 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		C33D5AC01F7AD57A00C3E033 /* SavedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,8 @@
 		C37289341F71FF4D00B19360 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C3131B951F7C0B08009B4298 /* waiting.jpg */,
+				C3131B941F7BFF40009B4298 /* loading.jpg */,
 				C37289401F7201BF00B19360 /* Info.plist */,
 				C309803B1F716EC000989BB5 /* LaunchScreen.storyboard */,
 				C30980321F716EC000989BB5 /* AppDelegate.swift */,

@@ -54,6 +54,8 @@ class ArticlesViewController: UIViewController {
 			
 			if let articleCell = cell as? ArticleCell {
 				articleCell.configure(with: cellViewModel)
+				//articleCell.articleImageView.loadImageUsingCacheViaCDN(withURL: cellViewModel.imageURLString, andWidth: 240)
+				//self.articlesTableView.reloadData()
 			}
 			
 			return cell
@@ -73,8 +75,9 @@ class ArticlesViewController: UIViewController {
 
 extension ArticlesViewController: ViewModelDelegate {
 	func viewModelDidSetData() {
+		self.progressHUD.removeFromSuperview()
 		self.articlesTableView.reloadData()
-		progressHUD.removeFromSuperview()
+		
 	}
 	
 	func viewModelDidThrowError(error: Error) {

@@ -17,9 +17,8 @@ class ArticleCell: UITableViewCell {
 	func configure(with viewModel: ArticleCellViewModel) {
 		titleLabel.text = viewModel.title
 		publishedAtLabel.text = viewModel.publishedAt
-		//DispatchQueue.main.async {
-			self.articleImageView.loadImageUsingCacheViaCDN(withURL: viewModel.imageURLString, andWidth: 240)
-		//}
+		self.articleImageView.loadImageUsingCacheViaCDN(withURL: viewModel.imageURLString, andWidth: 375, andHeight: 248)
+		
 		
 	}
 
