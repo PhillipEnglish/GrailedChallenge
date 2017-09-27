@@ -8,5 +8,5 @@
 
 protocol ViewModelDelegate: class {
 	func viewModelDidSetData()
-	func viewModelDidThrowError(error: GrailedError)
+	func viewModelDidThrowError(error: Error)
 }
