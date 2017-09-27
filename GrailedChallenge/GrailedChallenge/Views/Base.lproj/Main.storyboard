@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xnT-6E-3fm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,29 +9,82 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Saved Search-->
+        <scene sceneID="lpn-m5-x4a">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrailedChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="3jS-mw-n0U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7S7-PD-PwA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="265-dI-o0L">
-                                <rect key="frame" x="69" y="232" width="236" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNF-6z-Jhu">
+                                <rect key="frame" x="166" y="323" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Kxf-DM-LXT"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Saved Search" id="Mar-Tp-1hI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waR-OB-HsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-613" y="232"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="IA8-JT-53i">
+            <objects>
+                <viewController id="HcT-LZ-hsk" customClass="ArticlesViewController" customModule="GrailedChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ciS-C4-dFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qz0-eo-5jj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qz0-eo-5jj" firstAttribute="top" secondItem="pp4-Dt-AnG" secondAttribute="top" id="LhE-1a-vru"/>
+                            <constraint firstAttribute="trailing" secondItem="qz0-eo-5jj" secondAttribute="trailing" id="RoG-qk-ofZ"/>
+                            <constraint firstItem="qz0-eo-5jj" firstAttribute="bottom" secondItem="pp4-Dt-AnG" secondAttribute="bottom" id="eqZ-gN-oIX"/>
+                            <constraint firstItem="qz0-eo-5jj" firstAttribute="leading" secondItem="ciS-C4-dFd" secondAttribute="leading" id="gIG-Gl-Mpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pp4-Dt-AnG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Articles" id="VwL-YS-Chv"/>
                     <connections>
-                        <outlet property="testImage" destination="265-dI-o0L" id="02g-fy-UtC"/>
+                        <outlet property="articlesTableView" destination="qz0-eo-5jj" id="ZC9-m1-4jq"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3n-Gt-qZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-613.60000000000002" y="-433.13343328335833"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tVj-kf-2sa">
+            <objects>
+                <tabBarController id="xnT-6E-3fm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="WXi-ip-tFL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HcT-LZ-hsk" kind="relationship" relationship="viewControllers" id="rl2-me-vbo"/>
+                        <segue destination="3jS-mw-n0U" kind="relationship" relationship="viewControllers" id="Ocn-Yq-kgp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRo-A0-Dxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1566" y="-100"/>
         </scene>
     </scenes>
 </document>
