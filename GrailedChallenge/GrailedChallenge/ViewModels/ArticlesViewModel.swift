@@ -37,13 +37,12 @@ class ArticlesViewModel {
 	
 	func parseResponseData(responseJSON: JSON) {
 		let decoder = JSONDecoder()
-		//var dataArray: Data?
 		do {
 			let data = try responseJSON["data"].rawData()
 			let articlesToAppend = try decoder.decode([Article].self, from: data)
 			articles.append(contentsOf: articlesToAppend)
-			print("articles count: \(articles.count)")
 		} catch {
+			//handle error
 			print("could not make article objects from data")
 			}
 		

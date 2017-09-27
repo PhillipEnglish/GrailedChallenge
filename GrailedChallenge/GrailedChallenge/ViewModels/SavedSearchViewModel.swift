@@ -38,8 +38,8 @@ class SavedSearchesViewModel {
 		do {
 			let data = try responseJSON["data"].rawData()
 			searches = try decoder.decode([SavedSearch].self, from: data)
-			print("articles count: \(searches.count)")
 		} catch {
+			//handle error
 			print("could not make article objects from data")
 		}
 	}
