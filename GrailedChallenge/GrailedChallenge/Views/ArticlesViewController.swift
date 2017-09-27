@@ -17,7 +17,7 @@ class ArticlesViewController: UIViewController {
 		let viewModel: ArticlesViewModel = ArticlesViewModel()
 		viewModel.delegate = self
 		return viewModel
-	}
+	}()
 	
 	let progressHUD = ProgressHUD(text: "Loading")
 
