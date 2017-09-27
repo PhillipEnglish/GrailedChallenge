@@ -25,7 +25,6 @@ extension UIImageView {
 		}
 		
 		//if no image in cache, download from url
-		// if not, download image from url
 		URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
 			if error != nil {
 				print(error!)

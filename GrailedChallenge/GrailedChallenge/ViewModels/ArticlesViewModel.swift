@@ -44,8 +44,14 @@ class ArticlesViewModel {
 		} catch {
 			print("could not make article objects from data")
 			}
-		if let nextPage = responseJSON[ArticlesAPIConstants.dataString][ArticlesAPIConstants.paginationString][ArticlesAPIConstants.nextPageString].string {
-			paginationString = nextPage
+		
+		if let nextPage = responseJSON[ArticlesAPIConstants.metaDataString][ArticlesAPIConstants.paginationString][ArticlesAPIConstants.nextPageString].string {
+			
+			let subStringIndex = nextPage.index(nextPage.startIndex, offsetBy: 23)
+			let subString = nextPage[subStringIndex...]
+			paginationString = String(subString)
+			
+			
 		}
 	}
 	

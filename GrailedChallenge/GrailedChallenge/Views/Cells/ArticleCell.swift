@@ -17,7 +17,10 @@ class ArticleCell: UITableViewCell {
 	func configure(with viewModel: ArticleCellViewModel) {
 		titleLabel.text = viewModel.title
 		publishedAtLabel.text = viewModel.publishedAt
-		articleImageView.loadImageUsingCacheViaCDN(withURL: viewModel.imageURLString, andWidth: 240)
+		//DispatchQueue.main.async {
+			self.articleImageView.loadImageUsingCacheViaCDN(withURL: viewModel.imageURLString, andWidth: 240)
+		//}
+		
 	}
 
     override func awakeFromNib() {

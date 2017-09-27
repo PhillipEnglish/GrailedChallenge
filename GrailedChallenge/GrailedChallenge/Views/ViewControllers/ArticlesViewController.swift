@@ -27,7 +27,9 @@ class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		articlesTableView.dataSource = self
+		articlesTableView.delegate = self 
 		articlesViewModel.getArticlesFromServer(pagination: nil)
+		self.view.addSubview(progressHUD)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +61,9 @@ class ArticlesViewController: UIViewController {
 		
 		//Scrolling with Pagination
 		open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+			
 			if indexPath.row == numberOfArticles - 5 {
+				
 				guard let paginationString = articlesViewModel.paginationString else { return }
 				articlesViewModel.getArticlesFromServer(pagination: paginationString)
 				
