@@ -82,6 +82,8 @@ extension ArticlesViewController: ViewModelDelegate {
 	
 	func viewModelDidThrowError(error: Error) {
 		let alert = UIAlertController(title: "Error", message: "There was an error: \(error)", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
+			alert.dismiss(animated: true, completion: nil)}))
 		self.present(alert, animated: true )
 	}
 }

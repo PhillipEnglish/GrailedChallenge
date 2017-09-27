@@ -12,6 +12,9 @@
 		C30980381F716EC000989BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30980361F716EC000989BB5 /* Main.storyboard */; };
 		C309803A1F716EC000989BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30980391F716EC000989BB5 /* Assets.xcassets */; };
 		C309803D1F716EC000989BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C309803B1F716EC000989BB5 /* LaunchScreen.storyboard */; };
+		C3131B971F7C0E98009B4298 /* SavedSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3131B961F7C0E97009B4298 /* SavedSearchViewModel.swift */; };
+		C3131B991F7C1849009B4298 /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3131B981F7C1849009B4298 /* SearchCellViewModel.swift */; };
+		C3131B9B1F7C18D4009B4298 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3131B9A1F7C18D4009B4298 /* SearchCell.swift */; };
 		C31577961F7204850058888B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31577951F7204850058888B /* Extensions.swift */; };
 		C33D5ABF1F7AD56B00C3E033 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D5ABE1F7AD56B00C3E033 /* ArticlesViewController.swift */; };
 		C33D5AC11F7AD57A00C3E033 /* SavedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D5AC01F7AD57A00C3E033 /* SavedSearchViewController.swift */; };
@@ -39,6 +42,9 @@
 		C309803C1F716EC000989BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3131B941F7BFF40009B4298 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
 		C3131B951F7C0B08009B4298 /* waiting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waiting.jpg; sourceTree = "<group>"; };
+		C3131B961F7C0E97009B4298 /* SavedSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchViewModel.swift; sourceTree = "<group>"; };
+		C3131B981F7C1849009B4298 /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
+		C3131B9A1F7C18D4009B4298 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		C31577951F7204850058888B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C33D5ABE1F7AD56B00C3E033 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		C33D5AC01F7AD57A00C3E033 /* SavedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C344EFC21F7BEC17009AF8CF /* ArticleCell.swift */,
+				C3131B9A1F7C18D4009B4298 /* SearchCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -199,6 +206,8 @@
 				C33EDF8E1F78939F00D2D6B2 /* ArticlesViewModel.swift */,
 				C33D5AC21F7ADC6500C3E033 /* ViewModelDelegate.swift */,
 				C344EFBD1F7BEA15009AF8CF /* ArticleCellViewModel.swift */,
+				C3131B961F7C0E97009B4298 /* SavedSearchViewModel.swift */,
+				C3131B981F7C1849009B4298 /* SearchCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -342,6 +351,8 @@
 				C33EDF841F78802C00D2D6B2 /* Article.swift in Sources */,
 				C344EFC31F7BEC17009AF8CF /* ArticleCell.swift in Sources */,
 				C30980331F716EC000989BB5 /* AppDelegate.swift in Sources */,
+				C3131B991F7C1849009B4298 /* SearchCellViewModel.swift in Sources */,
+				C3131B971F7C0E98009B4298 /* SavedSearchViewModel.swift in Sources */,
 				C372893B1F71FFE100B19360 /* Constants.swift in Sources */,
 				C344EFBE1F7BEA15009AF8CF /* ArticleCellViewModel.swift in Sources */,
 				C33EDF861F78817300D2D6B2 /* SavedSearch.swift in Sources */,
@@ -349,6 +360,7 @@
 				C33D5AC11F7AD57A00C3E033 /* SavedSearchViewController.swift in Sources */,
 				C31577961F7204850058888B /* Extensions.swift in Sources */,
 				C33EDF8D1F788A7A00D2D6B2 /* APIController.swift in Sources */,
+				C3131B9B1F7C18D4009B4298 /* SearchCell.swift in Sources */,
 				C33D5ABF1F7AD56B00C3E033 /* ArticlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

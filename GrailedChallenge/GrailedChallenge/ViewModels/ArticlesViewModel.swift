@@ -18,7 +18,6 @@ class ArticlesViewModel {
 			DispatchQueue.main.async {
 				self.delegate?.viewModelDidSetData()
 			}
-			
 		}
 	}
 	
