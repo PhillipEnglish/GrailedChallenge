@@ -54,8 +54,6 @@ class ArticlesViewController: UIViewController {
 			
 			if let articleCell = cell as? ArticleCell {
 				articleCell.configure(with: cellViewModel)
-				//articleCell.articleImageView.loadImageUsingCacheViaCDN(withURL: cellViewModel.imageURLString, andWidth: 240)
-				//self.articlesTableView.reloadData()
 			}
 			
 			return cell
